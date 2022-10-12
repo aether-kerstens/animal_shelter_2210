@@ -16,15 +16,11 @@ RSpec.describe Shelter do
     end
 
     it 'can read the capacity' do
-      skip
-
       shelter = Shelter.new('Denver Animal Shelter', 5)
       expect(shelter.capacity).to eq(5)
     end
 
     it 'has no pets by default' do
-      skip
-
       shelter = Shelter.new('Denver Animal Shelter', 5)
       expect(shelter.pets).to eq []
     end
