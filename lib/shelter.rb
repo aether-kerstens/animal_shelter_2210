@@ -9,4 +9,10 @@ class Shelter
   def add_pet(pet)
     @pets << pet
   end
+
+  def call_pets
+    @pets.map do |pet|
+      "#{pet}!"
+    end
+  end
 end
