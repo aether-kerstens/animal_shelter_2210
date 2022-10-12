@@ -64,13 +64,27 @@ RSpec.describe Shelter do
   # Iteration 3
   describe '#over_capacity?' do
     it 'checks if shelter is over capacity' do
-      shelter =Shelter.new("Denver Animal Shelter", 3)
+      shelter = Shelter.new("Denver Animal Shelter", 3)
       shelter.add_pet('Salem')
       shelter.add_pet('Beethoven')
       expect(shelter.over_capacity?).to eq(false)
       shelter.add_pet('Spot')
       shelter.add_pet('Jonesy')
       expect(shelter.over_capacity?).to eq(true)
+    end
+  end
+
+  # Iteration 4
+  describe '#adopt' do
+    it 'can remove a pet from the shelter' do
+      shelter =Shelter.new("Denver Animal Shelter", 3)
+      shelter.add_pet('Salem')
+      shelter.add_pet('Beethoven')
+      shelter.add_pet('Spot')
+      shelter.add_pet('Jonesy')
+      expect(shelter.over_capacity?).to eq(true)
+      shelter.adopt
+      expect(shelter.over_capacity?).to eq(false)
     end
   end
 end

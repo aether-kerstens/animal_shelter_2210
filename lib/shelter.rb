@@ -21,6 +21,10 @@ class Shelter
       true
     else
       false
-    end 
+    end
+  end
+
+  def adopt
+    @pets.pop
   end
 end
