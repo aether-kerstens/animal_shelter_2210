@@ -5,4 +5,8 @@ class Shelter
     @capacity = capacity
     @pets = []
   end
+
+  def add_pet(pet)
+    @pets << pet
+  end
 end
